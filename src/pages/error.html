@@ -12,10 +12,25 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/gitSearchBase_CarloslFreitas/src/styles/reset.css">
+    <link rel="stylesheet" href="/gitSearchBase_CarloslFreitas/src/styles/globalStyles.css">
+    <link rel="stylesheet" href="/gitSearchBase_CarloslFreitas/src/styles/error.css">
 
     <title>Git Search - User Not Found</title>
   </head>
   <body>
+
+    <div class="container__error">
+      <h1 class="title__error">Ooops!</h1>
+      <div class="container__text-btn">
+        <p class="text__error">Não encotramos o usuário que você procurou, <strong>vamos tentar novamente.</strong> </p>
+        <button class="button__new-search">Nova Busca</button>
+      </div>
+    </div>
+
+    <div class="container__error-svg">
+      <figure><img src="/gitSearchBase_CarloslFreitas/src/img/triangulo.svg" alt="triangulo"></figure>
+    </div>
 
     <script type="module" src="../scripts/error.js"></script>
   </body>
