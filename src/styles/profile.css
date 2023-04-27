@@ -8,14 +8,21 @@ body{
     width: 55%;
     margin: 0 auto;
   }
+  img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
   .profile__container{
     display: flex;
     justify-content: space-between;
-    padding: 3rem 0;
+    padding: 3rem 1rem 3.5rem 1rem;
+    align-items: center;
   }
   .user__container{
     display: flex;
     gap: 1rem;
+    align-items: center;
   }
   .user__name{
     font-size: 24px;
@@ -40,10 +47,12 @@ body{
   
   .repository__container{
     display: flex;
+    align-items: center;
     justify-content: center;
   }
   .repository__list{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
   }
@@ -52,7 +61,7 @@ body{
     gap: 2rem;
     flex-direction: column;
     justify-content: center;
-    padding: 0 30px;
+    padding: 0 29px;
   
     height: 243px;
     width: 381px;
@@ -62,18 +71,26 @@ body{
   }
   .repository__item:hover{
     background-color: var(--color-grey-1);
-    transform: scale(1.110);
+    transform: scale(1.06);
   }
   .repository__title{
     font-size: 20px;
     font-weight: 500;
   }
   .repository__description{
+    display: flex;
+    align-items: center;
+    
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;  
     color: #FFFFFF99;
+
+    height: 80px;
+    overflow: auto;
+    /* border: solid 1px; */
   }
+
   .repository__button{
     height: 28px;
     width: 93px;
@@ -83,11 +100,13 @@ body{
     font-family: var(--font-primary);
     color: var(--color-grey-7);
     border: solid 1px var(--color-grey-7);
-    transition: 0.2s;
+    transition: 0.1s;
   }
   .repository__button:hover{
     cursor: pointer;
     color: var(--color-grey-7);
     background-color: var(--color-brand-2);
     border: solid 1px var(--color-brand-2);
+    font-weight: 600;
+    transform: scale(1.06);
   }
