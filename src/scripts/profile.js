@@ -1,8 +1,8 @@
 const userInfo = JSON.parse(localStorage.getItem('Github:User'))
 const userRepos = JSON.parse(localStorage.getItem('Github:UserRepos'))
 
-console.log(userInfo);
-console.log(userRepos);
+// console.log(userInfo);
+// console.log(userRepos);
 
 const renderProfileUser = user => {
     const userContainer = document.querySelector('.user__container')
@@ -17,11 +17,13 @@ const renderProfileUser = user => {
 
     userContainer.append(figure, nameUser)
     figure.appendChild(imgUser)
+
+    buttonLogout()
 }
 const renderAllRepository = listRepos => {
     const repositoryList = document.querySelector('.repository__list')
     repositoryList.innerHTML = ' '
-    console.log(listRepos);
+    // console.log(listRepos);
     listRepos.forEach(itemRepos => {
         repositoryList.appendChild(createItemListRepository(itemRepos))
     });
@@ -50,13 +52,18 @@ const createButtonLink = itemRepos => {
     const buttonReposLink = document.createElement('button')
     buttonReposLink.classList = 'repository__button'
     buttonReposLink.innerText = 'Repositório'
-
     buttonReposLink.addEventListener('click', ()=> {
-        // location.replace(itemRepos.html_url)
-        //redirecionamento aqui!
+        open(itemRepos.html_url, '_blank')
     })
-
     return buttonReposLink
+}
+const buttonLogout = () => {
+    const btnLogout = document.querySelector('.button__change-profile')
+
+    btnLogout.addEventListener('click', () =>{
+        localStorage.clear()
+        location.replace('../../index.html')
+    })
 }
 
 renderProfileUser(userInfo)
