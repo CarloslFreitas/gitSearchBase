@@ -33,7 +33,7 @@ const catchUserInput = () => {
     const button = document.querySelector('.button__search')
     const input = document.querySelector('#inputSearch')
     const divLoader = document.querySelector('.Loader-imgs__container')
-
+  
     button.addEventListener('click', async () => {
         divLoader.classList.remove('hidden')
         const userName = input.value

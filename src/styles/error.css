@@ -75,7 +75,6 @@ body{
     padding: 30px 0;
   }
   .container__error-svg{
-    border: solid;
     position: relative;
     top: -70px;
     height: 15.625rem;
